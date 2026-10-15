@@ -40,6 +40,13 @@ export const PRODUCTS: Product[] = [
     isLiveFryer: true,
     liveBadgeText: "Saindo agora · fornada das 19h",
     liveBadgeTextEn: "Fresh out · 7pm batch",
+    dimensions: {
+      lengthCm: 24,
+      widthCm: 13,
+      weightGrams: 280,
+      sizeLabel: "Padrão feira tradicional",
+      sizeLabelEn: "Traditional street market size",
+    },
   },
   {
     id: "calabresa",
@@ -58,6 +65,13 @@ export const PRODUCTS: Product[] = [
     isLiveFryer: true,
     liveBadgeText: "Saindo agora · fornada das 19h",
     liveBadgeTextEn: "Fresh out · 7pm batch",
+    dimensions: {
+      lengthCm: 24,
+      widthCm: 13,
+      weightGrams: 290,
+      sizeLabel: "Padrão feira tradicional",
+      sizeLabelEn: "Traditional street market size",
+    },
   },
   {
     id: "carne",
@@ -76,6 +90,13 @@ export const PRODUCTS: Product[] = [
     isLiveFryer: true,
     liveBadgeText: "Frita em ~6 min",
     liveBadgeTextEn: "Fried in ~6 min",
+    dimensions: {
+      lengthCm: 24,
+      widthCm: 13,
+      weightGrams: 285,
+      sizeLabel: "Padrão feira tradicional",
+      sizeLabelEn: "Traditional street market size",
+    },
   },
   {
     id: "pizza",
@@ -89,6 +110,13 @@ export const PRODUCTS: Product[] = [
     spiciness: "none",
     serves: "1 pessoa",
     image: "/images/pastel-pizza.webp",
+    dimensions: {
+      lengthCm: 24,
+      widthCm: 13,
+      weightGrams: 295,
+      sizeLabel: "Padrão feira tradicional",
+      sizeLabelEn: "Traditional street market size",
+    },
   },
   {
     id: "frango-catupiry",
@@ -102,6 +130,13 @@ export const PRODUCTS: Product[] = [
     spiciness: "none",
     serves: "1 pessoa",
     image: "/images/pastel-frango.webp",
+    dimensions: {
+      lengthCm: 24,
+      widthCm: 13,
+      weightGrams: 310,
+      sizeLabel: "Padrão feira tradicional",
+      sizeLabelEn: "Traditional street market size",
+    },
   },
 
   // --- COMBOS ---
@@ -120,6 +155,14 @@ export const PRODUCTS: Product[] = [
     badge: "Combo da feira",
     badgeEn: "Market combo",
     image: "/images/combo-feira.webp",
+    dimensions: {
+      lengthCm: 24,
+      widthCm: 13,
+      weightGrams: 580,
+      volumeMl: 500,
+      sizeLabel: "2 pastéis (24 cm) + 500 ml caldo",
+      sizeLabelEn: "2 pastéis (24 cm) + 500 ml juice",
+    },
   },
 
   // --- DOCES ---
@@ -140,6 +183,13 @@ export const PRODUCTS: Product[] = [
     isLiveFryer: true,
     liveBadgeText: "Frita em ~6 min",
     liveBadgeTextEn: "Fried in ~6 min",
+    dimensions: {
+      lengthCm: 18,
+      widthCm: 11,
+      weightGrams: 190,
+      sizeLabel: "Sobremesa artesanal",
+      sizeLabelEn: "Artisan dessert size",
+    },
   },
   {
     id: "romeu-e-julieta",
@@ -153,6 +203,13 @@ export const PRODUCTS: Product[] = [
     spiciness: "none",
     serves: "1 pessoa",
     image: "/images/romeu-e-julieta.webp",
+    dimensions: {
+      lengthCm: 18,
+      widthCm: 11,
+      weightGrams: 200,
+      sizeLabel: "Sobremesa artesanal",
+      sizeLabelEn: "Artisan dessert size",
+    },
   },
 
   // --- BEBIDAS ---
@@ -170,6 +227,11 @@ export const PRODUCTS: Product[] = [
     badge: "Combina com pastel",
     badgeEn: "Best with pastel",
     image: "/images/caldo-de-cana.webp",
+    dimensions: {
+      volumeMl: 500,
+      sizeLabel: "Copo 500 ml",
+      sizeLabelEn: "500 ml cup",
+    },
   },
   {
     id: "guarana",
@@ -183,5 +245,10 @@ export const PRODUCTS: Product[] = [
     spiciness: "none",
     serves: "1 pessoa",
     image: "/images/guarana.webp",
+    dimensions: {
+      volumeMl: 350,
+      sizeLabel: "Lata 350 ml",
+      sizeLabelEn: "350 ml can",
+    },
   },
 ];

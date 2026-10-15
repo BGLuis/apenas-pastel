@@ -7,6 +7,15 @@ export interface ProductAddon {
   price: number;
 }
 
+export interface ProductDimensions {
+  lengthCm?: number;
+  widthCm?: number;
+  weightGrams?: number;
+  volumeMl?: number;
+  sizeLabel?: string;
+  sizeLabelEn?: string;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -25,6 +34,7 @@ export interface Product {
   isLiveFryer?: boolean;
   liveBadgeText?: string;
   liveBadgeTextEn?: string;
+  dimensions?: ProductDimensions;
 }
 
 export interface CartItem {

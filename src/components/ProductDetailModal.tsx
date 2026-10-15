@@ -9,6 +9,7 @@ import { PRODUCT_ADDONS } from "@/data/menu";
 import { formatCurrency, cn } from "@/lib/utils";
 import { useFavoritesStore } from "@/store/useFavoritesStore";
 import { useLocaleStore } from "@/store/useLocaleStore";
+import { ProductDimensionVisual } from "@/components/ProductDimensionVisual";
 
 interface ProductDetailModalProps {
   product: Product | null;
@@ -171,6 +172,9 @@ export function ProductDetailModal({
                 </span>
               </div>
             </div>
+
+            {/* Pastel Physical Dimensions & Weight Blueprint */}
+            <ProductDimensionVisual product={product} />
 
             {/* Addons Section */}
             {product.category === "salgados" && (

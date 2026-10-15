@@ -48,6 +48,20 @@ export function ProductCard({
               {description}
             </p>
 
+            {product.dimensions && (
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-black/20 text-xs font-medium text-brand-yellow-light border border-white/10 w-fit">
+                <span>📏 {product.dimensions.lengthCm}×{product.dimensions.widthCm} cm</span>
+                <span className="opacity-40">•</span>
+                <span>⚖️ ~{product.dimensions.weightGrams}g</span>
+                {product.dimensions.volumeMl && (
+                  <>
+                    <span className="opacity-40">•</span>
+                    <span>🥤 {product.dimensions.volumeMl}ml</span>
+                  </>
+                )}
+              </div>
+            )}
+
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <div className="px-4 py-2 rounded-xl bg-brand-yellow text-brand-text-primary font-display font-bold text-xl shadow-price flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-brand-red" />
@@ -145,6 +159,19 @@ export function ProductCard({
           <p className="text-xs sm:text-sm text-brand-text-secondary dark:text-brand-dark-secondary line-clamp-2">
             {description}
           </p>
+          {product.dimensions && (
+            <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-brand-cream-dark/25 dark:bg-brand-dark-border/40 text-[11px] font-semibold text-brand-text-secondary dark:text-brand-dark-secondary border border-brand-cream-dark/40 dark:border-brand-dark-border/60 w-fit">
+              {product.dimensions.volumeMl ? (
+                <span>🥤 {product.dimensions.volumeMl}ml</span>
+              ) : (
+                <>
+                  <span>📏 {product.dimensions.lengthCm}×{product.dimensions.widthCm} cm</span>
+                  <span className="opacity-40">•</span>
+                  <span>⚖️ ~{product.dimensions.weightGrams}g</span>
+                </>
+              )}
+            </div>
+          )}
           <div className="font-display font-bold text-base text-brand-red dark:text-brand-yellow pt-1">
             {formatCurrency(product.price)}
           </div>
@@ -230,9 +257,16 @@ export function ProductCard({
           <h3 className="font-display font-bold text-lg sm:text-xl text-brand-text-primary dark:text-brand-dark-text mb-1 group-hover:text-brand-red dark:group-hover:text-brand-yellow transition-colors">
             {name}
           </h3>
-          <p className="text-xs sm:text-sm text-brand-text-secondary dark:text-brand-dark-secondary line-clamp-2 leading-relaxed">
+          <p className="text-xs sm:text-sm text-brand-text-secondary dark:text-brand-dark-secondary line-clamp-2 leading-relaxed mb-2">
             {description}
           </p>
+          {product.dimensions && (
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-brand-cream-dark/25 dark:bg-brand-dark-border/40 text-[11px] font-semibold text-brand-text-secondary dark:text-brand-dark-secondary border border-brand-cream-dark/40 dark:border-brand-dark-border/60 w-fit">
+              <span>📏 {product.dimensions.lengthCm}×{product.dimensions.widthCm} cm</span>
+              <span className="opacity-40">•</span>
+              <span>⚖️ ~{product.dimensions.weightGrams}g</span>
+            </div>
+          )}
         </div>
 
         {/* Footer: Prep Time & Quick Add */}

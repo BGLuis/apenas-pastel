@@ -62,6 +62,16 @@ export const translations = {
     addToCart: "Adicionar",
     free: "grátis",
 
+    // Dimensões & Medidas
+    dimensionsTitle: "Tamanho & Peso Real",
+    dimensionsSubtitle: "Padrão de feira tradicional · massa aberta no dia",
+    dimensionLength: "Comprimento",
+    dimensionWidth: "Largura",
+    dimensionWeight: "Peso recheado",
+    dimensionVolume: "Volume líquido",
+    crustNote: "Recheio generoso distribuído de ponta a ponta",
+    dimensionComparison: "~2x maior que de lanchonete",
+
     // Cart
     floatingCartItems: "itens",
     floatingCartView: "Ver sacola",
@@ -192,6 +202,16 @@ export const translations = {
     notesPlaceholder: "E.g.: no onions, extra crispy",
     addToCart: "Add to bag",
     free: "free",
+
+    // Dimensões & Medidas
+    dimensionsTitle: "Real Size & Weight",
+    dimensionsSubtitle: "Traditional street market standard · rolled fresh daily",
+    dimensionLength: "Length",
+    dimensionWidth: "Width",
+    dimensionWeight: "Stuffed weight",
+    dimensionVolume: "Net volume",
+    crustNote: "Generous filling distributed from crust to crust",
+    dimensionComparison: "~2x larger than snack bar size",
 
     floatingCartItems: "items",
     floatingCartView: "View bag",
