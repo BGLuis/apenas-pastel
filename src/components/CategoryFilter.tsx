@@ -4,6 +4,7 @@ import React from "react";
 import { Search, Heart } from "lucide-react";
 import { ProductCategory } from "@/types";
 import { useLocaleStore } from "@/store/useLocaleStore";
+import { useDragScroll } from "@/hooks/useDragScroll";
 import { cn } from "@/lib/utils";
 
 interface CategoryFilterProps {
@@ -34,6 +35,8 @@ export function CategoryFilter({
     { id: "doces", label: t.catDoces },
     { id: "bebidas", label: t.catBebidas },
   ];
+
+  const { ref, isDragging, events } = useDragScroll();
 
   return (
     <div className="sticky top-0 z-30 w-full bg-brand-cream/95 dark:bg-brand-dark-bg/95 backdrop-blur-md pt-4 pb-3 border-b border-brand-cream-dark/60 dark:border-brand-dark-border transition-colors">
@@ -76,15 +79,24 @@ export function CategoryFilter({
         </div>
 
         {/* Categories Chips */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
+        <div
+          ref={ref}
+          {...events}
+          className={cn(
+            "flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0 drag-scroll select-none",
+            isDragging ? "cursor-grabbing" : "cursor-grab"
+          )}
+        >
           {categories.map((cat) => {
             const isActive = selectedCategory === cat.id && !showOnlyFavorites;
             return (
               <button
                 key={cat.id}
-                onClick={() => onSelectCategory(cat.id)}
+                onClick={() => {
+                  if (!isDragging) onSelectCategory(cat.id);
+                }}
                 className={cn(
-                  "whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold transition-all select-none",
+                  "whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold transition-all select-none hover:scale-[1.02] active:scale-95",
                   isActive
                     ? "bg-brand-red text-white shadow-sm dark:bg-[#5CEE1B] dark:text-brand-dark-bg"
                     : "bg-white dark:bg-brand-dark-surface text-brand-text-primary dark:text-brand-dark-text border border-brand-cream-dark dark:border-brand-dark-border hover:bg-brand-cream/50"

@@ -18,12 +18,21 @@
   --border-subtle: #3A251E;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-dm-sans), sans-serif;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
+}
+
+/* Offset for fixed headers when jumping to anchors */
+[id] {
+  scroll-margin-top: 5.5rem;
 }
 
 /* Custom subtle scrollbar */
@@ -87,4 +96,25 @@ body {
   background-size: auto 10px;
   height: 10px;
   width: 100%;
+}
+
+/* Hide scrollbars while allowing touch/drag scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Drag to scroll container styling */
+.drag-scroll {
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+}
+.drag-scroll:active {
+  cursor: grabbing;
 }

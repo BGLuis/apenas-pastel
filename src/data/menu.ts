@@ -36,7 +36,7 @@ export const PRODUCTS: Product[] = [
     serves: "1 pessoa",
     badge: "O clássico da casa",
     badgeEn: "House classic",
-    image: "/images/pastel-queijo.png",
+    image: "/images/pastel-queijo.webp",
     isLiveFryer: true,
     liveBadgeText: "Saindo agora · fornada das 19h",
     liveBadgeTextEn: "Fresh out · 7pm batch",
@@ -54,7 +54,7 @@ export const PRODUCTS: Product[] = [
     serves: "1 pessoa",
     badge: "Mais pedido",
     badgeEn: "Most popular",
-    image: "/images/pastel-calabresa.png",
+    image: "/images/pastel-calabresa.webp",
     isLiveFryer: true,
     liveBadgeText: "Saindo agora · fornada das 19h",
     liveBadgeTextEn: "Fresh out · 7pm batch",
@@ -72,7 +72,7 @@ export const PRODUCTS: Product[] = [
     serves: "1 pessoa",
     badge: "Mais pedido",
     badgeEn: "Most popular",
-    image: "/images/pastel-carne.png",
+    image: "/images/pastel-carne.webp",
     isLiveFryer: true,
     liveBadgeText: "Frita em ~6 min",
     liveBadgeTextEn: "Fried in ~6 min",
@@ -88,7 +88,7 @@ export const PRODUCTS: Product[] = [
     prepTime: "~6 min",
     spiciness: "none",
     serves: "1 pessoa",
-    image: "/images/pastel-pizza.png",
+    image: "/images/pastel-pizza.webp",
   },
   {
     id: "frango-catupiry",
@@ -101,7 +101,7 @@ export const PRODUCTS: Product[] = [
     prepTime: "~7 min",
     spiciness: "none",
     serves: "1 pessoa",
-    image: "/images/pastel-frango.png",
+    image: "/images/pastel-frango.webp",
   },
 
   // --- COMBOS ---
@@ -119,7 +119,7 @@ export const PRODUCTS: Product[] = [
     serves: "1 a 2 pessoas",
     badge: "Combo da feira",
     badgeEn: "Market combo",
-    image: "/images/combo-feira.png",
+    image: "/images/combo-feira.webp",
   },
 
   // --- DOCES ---
@@ -136,7 +136,7 @@ export const PRODUCTS: Product[] = [
     serves: "1 pessoa",
     badge: "Mais pedido",
     badgeEn: "Most popular",
-    image: "/images/pastel-brigadeiro.png",
+    image: "/images/pastel-brigadeiro.webp",
     isLiveFryer: true,
     liveBadgeText: "Frita em ~6 min",
     liveBadgeTextEn: "Fried in ~6 min",
@@ -152,7 +152,7 @@ export const PRODUCTS: Product[] = [
     prepTime: "~6 min",
     spiciness: "none",
     serves: "1 pessoa",
-    image: "/images/romeu-e-julieta.png",
+    image: "/images/romeu-e-julieta.webp",
   },
 
   // --- BEBIDAS ---
@@ -169,7 +169,7 @@ export const PRODUCTS: Product[] = [
     serves: "1 pessoa",
     badge: "Combina com pastel",
     badgeEn: "Best with pastel",
-    image: "/images/caldo-de-cana.png",
+    image: "/images/caldo-de-cana.webp",
   },
   {
     id: "guarana",
@@ -182,6 +182,6 @@ export const PRODUCTS: Product[] = [
     prepTime: "Imediato",
     spiciness: "none",
     serves: "1 pessoa",
-    image: "/images/guarana.png",
+    image: "/images/guarana.webp",
   },
 ];

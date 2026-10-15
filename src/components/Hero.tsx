@@ -109,7 +109,7 @@ export function Hero({ onSelectFeaturedProduct }: HeroProps) {
               {/* Product Photo */}
               <div className="relative w-full aspect-[4/5] overflow-hidden">
                 <Image
-                  src="/images/pastel-queijo.png"
+                  src="/images/pastel-queijo.webp"
                   alt="Pastel de Queijo"
                   fill
                   priority

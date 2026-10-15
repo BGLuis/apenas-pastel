@@ -4,6 +4,8 @@ import React from "react";
 import { Product } from "@/types";
 import { ProductCard } from "@/components/ProductCard";
 import { useLocaleStore } from "@/store/useLocaleStore";
+import { useDragScroll } from "@/hooks/useDragScroll";
+import { cn } from "@/lib/utils";
 
 interface LiveFryerSectionProps {
   products: Product[];
@@ -19,6 +21,7 @@ export function LiveFryerSection({
   onSeeAll,
 }: LiveFryerSectionProps) {
   const { t } = useLocaleStore();
+  const { ref, isDragging, events } = useDragScroll();
 
   const liveProducts = products.filter((p) => p.isLiveFryer);
 
@@ -49,14 +52,23 @@ export function LiveFryerSection({
           )}
         </div>
 
-        {/* Carousel */}
-        <div className="flex items-center gap-3.5 overflow-x-auto pb-4 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
+        {/* Carousel with Drag-to-Scroll */}
+        <div
+          ref={ref}
+          {...events}
+          className={cn(
+            "flex items-center gap-3.5 overflow-x-auto pb-4 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0 drag-scroll select-none",
+            isDragging ? "cursor-grabbing" : "cursor-grab"
+          )}
+        >
           {liveProducts.map((product) => (
             <ProductCard
               key={product.id}
               product={product}
               variant="compact"
-              onSelectProduct={onSelectProduct}
+              onSelectProduct={(p) => {
+                if (!isDragging) onSelectProduct(p);
+              }}
               onQuickAdd={onQuickAdd}
             />
           ))}
