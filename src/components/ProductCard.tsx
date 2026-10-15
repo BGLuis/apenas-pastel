@@ -48,7 +48,7 @@ export function ProductCard({
               {description}
             </p>
 
-            <div className="flex items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-2">
               <div className="px-4 py-2 rounded-xl bg-brand-yellow text-brand-text-primary font-display font-bold text-xl shadow-price flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-brand-red" />
                 <span>{formatCurrency(product.price)}</span>
@@ -58,6 +58,15 @@ export function ProductCard({
                   {formatCurrency(product.originalPrice)}
                 </span>
               )}
+              <button
+                onClick={(e) => onQuickAdd(product, e)}
+                className="ml-auto px-4 py-2 rounded-full bg-white text-brand-red font-bold text-sm flex items-center gap-1.5 shadow-sm hover:scale-105 active:scale-95 transition-all"
+                title="Adicionar combo à sacola"
+                aria-label="Adicionar combo à sacola"
+              >
+                <Plus className="w-4 h-4 stroke-[3]" />
+                <span>{locale === "en" ? "Add to bag" : "Adicionar"}</span>
+              </button>
             </div>
           </div>
 

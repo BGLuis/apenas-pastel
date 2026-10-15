@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ArrowLeft, Check, Info, MessageCircle, CreditCard, DollarSign, QrCode } from "lucide-react";
+import { toast } from "sonner";
 import { useCartStore } from "@/store/useCartStore";
 import { useLocaleStore } from "@/store/useLocaleStore";
 import { PaymentMethod } from "@/types";
@@ -16,10 +17,10 @@ export function CheckoutView({ onBack, onOrderCompleted }: CheckoutViewProps) {
   const { items, deliveryType, getSubtotal, getDeliveryFee, getTotal } = useCartStore();
   const { locale, t } = useLocaleStore();
 
-  const [customerName, setCustomerName] = useState("Luis Henrique");
-  const [street, setStreet] = useState("Rua Pium-í, 1250");
+  const [customerName, setCustomerName] = useState("");
+  const [street, setStreet] = useState("");
   const [neighborhood, setNeighborhood] = useState("Barroca");
-  const [complement, setComplement] = useState("Apto 302");
+  const [complement, setComplement] = useState("");
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("card");
 
   const total = getTotal();
@@ -27,6 +28,16 @@ export function CheckoutView({ onBack, onOrderCompleted }: CheckoutViewProps) {
   const deliveryFee = getDeliveryFee();
 
   const handleSendOrder = () => {
+    if (!customerName.trim()) {
+      toast.error(locale === "en" ? "Please enter your name" : "Por favor, digite seu nome.");
+      return;
+    }
+
+    if (deliveryType === "delivery" && !street.trim()) {
+      toast.error(locale === "en" ? "Please enter your delivery address" : "Por favor, informe a rua e número para entrega.");
+      return;
+    }
+
     // Generate WhatsApp text
     const paymentLabels = {
       pix: "Pix",

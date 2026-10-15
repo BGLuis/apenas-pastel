@@ -23,45 +23,10 @@ interface CartState {
   getFreeDeliveryRemaining: () => number;
 }
 
-// Initial state matching Figma Screen 03 (Sacola - 4 items, R$ 29,50 subtotal)
-const getInitialItems = (): CartItem[] => {
-  const calabresa = PRODUCTS.find((p) => p.id === "calabresa")!;
-  const queijo = PRODUCTS.find((p) => p.id === "queijo")!;
-  const guarana = PRODUCTS.find((p) => p.id === "guarana")!;
-  const bordaCatupiry = PRODUCT_ADDONS.find((a) => a.id === "borda-catupiry")!;
-
-  return [
-    {
-      cartId: "mock-1",
-      product: calabresa,
-      quantity: 1,
-      selectedAddons: [bordaCatupiry],
-      notes: "sem cebola",
-      itemTotal: 9.5, // 7.50 + 2.00
-    },
-    {
-      cartId: "mock-2",
-      product: queijo,
-      quantity: 2,
-      selectedAddons: [],
-      notes: "",
-      itemTotal: 15.0, // 7.50 * 2
-    },
-    {
-      cartId: "mock-3",
-      product: guarana,
-      quantity: 1,
-      selectedAddons: [],
-      notes: "Lata 350 ml",
-      itemTotal: 5.0, // 5.00 * 1
-    },
-  ];
-};
-
 export const useCartStore = create<CartState>()(
   persist(
     (set, get) => ({
-      items: getInitialItems(),
+      items: [],
       deliveryType: "delivery",
       lastAddedItem: null,
 
@@ -164,7 +129,11 @@ export const useCartStore = create<CartState>()(
       },
     }),
     {
-      name: "apenas-pastel-cart",
+      name: "apenas-pastel-cart-v2",
+      partialize: (state) => ({
+        items: state.items.filter((item) => !item.cartId.startsWith("mock-")),
+        deliveryType: state.deliveryType,
+      }),
     }
   )
 );
