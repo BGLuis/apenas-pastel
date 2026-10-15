@@ -54,7 +54,7 @@ export function CartDrawer({
   };
 
   return (
-    <Drawer.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
+    <Drawer.Root open={isOpen} onOpenChange={(open) => !open && onClose()} handleOnly>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity" />
         <Drawer.Content className={cn(
@@ -63,7 +63,7 @@ export function CartDrawer({
         )}>
           {/* Header Grab Handle */}
           <div className="w-full pt-3 pb-1 flex justify-center bg-transparent flex-shrink-0">
-            <div className="w-12 h-1.5 rounded-full bg-brand-cream-dark dark:bg-brand-dark-border" />
+            <Drawer.Handle className="w-12 h-1.5 rounded-full bg-brand-cream-dark dark:bg-brand-dark-border cursor-grab active:cursor-grabbing" />
           </div>
 
           {/* App Bar */}
@@ -98,7 +98,10 @@ export function CartDrawer({
           </div>
 
           {/* Content Body */}
-          <div className="flex-1 min-h-0 overflow-y-auto px-5 py-4 flex flex-col gap-4 overscroll-contain">
+          <div
+            data-vaul-no-drag
+            className="flex-1 min-h-0 overflow-y-auto px-5 py-4 pb-6 flex flex-col gap-4 overscroll-contain touch-pan-y"
+          >
             {items.length === 0 ? (
               <div className="py-16 flex flex-col items-center justify-center text-center gap-3">
                 <div className="w-16 h-16 rounded-full bg-brand-cream-dark/40 flex items-center justify-center text-brand-red dark:text-brand-yellow text-2xl">
