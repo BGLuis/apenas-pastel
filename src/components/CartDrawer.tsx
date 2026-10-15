@@ -117,7 +117,7 @@ export function CartDrawer({
             ) : (
               <>
                 {/* Segmented Delivery vs Pickup */}
-                <div className="p-1 rounded-full bg-brand-cream-dark/40 dark:bg-brand-dark-card flex items-center gap-1 border border-brand-cream-dark/40 dark:border-brand-dark-border">
+                <div className="shrink-0 p-1 rounded-full bg-brand-cream-dark/40 dark:bg-brand-dark-card flex items-center gap-1 border border-brand-cream-dark/40 dark:border-brand-dark-border">
                   <button
                     onClick={() => setDeliveryType("delivery")}
                     className={cn(
@@ -146,7 +146,7 @@ export function CartDrawer({
 
                 {/* Free Delivery Progress Banner */}
                 {deliveryType === "delivery" && (
-                  <div className="p-3.5 rounded-2xl bg-brand-yellow-light/60 dark:bg-brand-yellow/15 border border-brand-yellow/40 flex flex-col gap-2">
+                  <div className="shrink-0 p-3.5 rounded-2xl bg-brand-yellow-light/60 dark:bg-brand-yellow/15 border border-brand-yellow/40 flex flex-col gap-2">
                     <div className="flex items-center gap-2 text-xs font-bold text-brand-text-primary dark:text-brand-dark-text">
                       <Bike className="w-4 h-4 text-brand-red dark:text-brand-yellow flex-shrink-0" />
                       <span>
@@ -175,7 +175,7 @@ export function CartDrawer({
                 )}
 
                 {/* Cart Items List */}
-                <div className="rounded-2xl bg-white dark:bg-brand-dark-card border border-brand-cream-dark/50 dark:border-brand-dark-border divide-y divide-brand-cream-dark/30 dark:divide-brand-dark-border/50 overflow-hidden shadow-sm">
+                <div className="shrink-0 rounded-2xl bg-white dark:bg-brand-dark-card border border-brand-cream-dark/50 dark:border-brand-dark-border divide-y divide-brand-cream-dark/30 dark:divide-brand-dark-border/50 overflow-hidden shadow-sm">
                   {items.map((item) => {
                     const itemName = locale === "en" ? item.product.nameEn : item.product.name;
                     return (
@@ -236,7 +236,7 @@ export function CartDrawer({
 
                 {/* Upsell Suggestions */}
                 {upsellProducts.length > 0 && (
-                  <div className="flex flex-col gap-2 pt-2">
+                  <div className="shrink-0 flex flex-col gap-2 pt-2">
                     <span className="font-display font-bold text-sm text-brand-text-primary dark:text-brand-dark-text">
                       {t.combinaComPedido}
                     </span>
@@ -273,7 +273,7 @@ export function CartDrawer({
                 )}
 
                 {/* Financial Summary */}
-                <div className="p-4 rounded-2xl bg-white dark:bg-brand-dark-card border border-brand-cream-dark/50 dark:border-brand-dark-border flex flex-col gap-2.5">
+                <div className="shrink-0 p-4 rounded-2xl bg-white dark:bg-brand-dark-card border border-brand-cream-dark/50 dark:border-brand-dark-border flex flex-col gap-2.5">
                   <div className="flex items-center justify-between text-xs text-brand-text-secondary dark:text-brand-dark-secondary">
                     <span>{t.subtotal}</span>
                     <span className="font-bold text-brand-text-primary dark:text-brand-dark-text">

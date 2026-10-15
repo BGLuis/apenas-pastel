@@ -81,7 +81,7 @@ export function ProductDetailModal({
             className="flex-1 min-h-0 overflow-y-auto px-5 pb-6 overscroll-contain touch-pan-y flex flex-col"
           >
             {/* Food Image with Close and Favorite actions */}
-            <div className="relative w-full aspect-[16/11] rounded-2xl overflow-hidden mb-4 shadow-md bg-brand-cream-dark/20">
+            <div className="shrink-0 relative w-full aspect-[16/11] rounded-2xl overflow-hidden mb-4 shadow-md bg-brand-cream-dark/20">
               <Image
                 src={product.image}
                 alt={name}
@@ -124,7 +124,7 @@ export function ProductDetailModal({
             </div>
 
             {/* Product Title and Live Badge */}
-            <div className="flex flex-col gap-2 mb-4">
+            <div className="shrink-0 flex flex-col gap-2 mb-4">
               {liveBadge && (
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-red text-white text-xs font-bold w-fit shadow-sm">
                   <Flame className="w-3.5 h-3.5 fill-current" />
@@ -140,7 +140,7 @@ export function ProductDetailModal({
             </div>
 
             {/* Quick Facts Row */}
-            <div className="grid grid-cols-3 gap-2.5 py-3 px-4 rounded-2xl bg-white dark:bg-brand-dark-card border border-brand-cream-dark/50 dark:border-brand-dark-border mb-5">
+            <div className="shrink-0 grid grid-cols-3 gap-2.5 py-3 px-4 rounded-2xl bg-white dark:bg-brand-dark-card border border-brand-cream-dark/50 dark:border-brand-dark-border mb-5">
               <div className="flex flex-col items-center text-center gap-1">
                 <Clock className="w-4 h-4 text-brand-yellow" />
                 <span className="text-[11px] font-bold uppercase tracking-wider text-brand-text-secondary dark:text-brand-dark-secondary">
@@ -174,7 +174,7 @@ export function ProductDetailModal({
 
             {/* Addons Section */}
             {product.category === "salgados" && (
-              <div className="flex flex-col gap-2.5 mb-5">
+              <div className="shrink-0 flex flex-col gap-2.5 mb-5">
                 <div className="flex items-center justify-between">
                   <span className="font-display font-bold text-base text-brand-text-primary dark:text-brand-dark-text">
                     {t.addonsTitle}
@@ -226,7 +226,7 @@ export function ProductDetailModal({
             )}
 
             {/* Special Instructions Field */}
-            <div className="flex flex-col gap-1.5 mb-2">
+            <div className="shrink-0 flex flex-col gap-1.5 mb-2">
               <label className="text-xs font-bold uppercase tracking-wider text-brand-text-secondary dark:text-brand-dark-secondary">
                 {t.notesLabel}
               </label>
