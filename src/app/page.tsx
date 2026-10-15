@@ -108,7 +108,7 @@ export default function HomePage() {
   const featuredQueijo = PRODUCTS.find((p) => p.id === "queijo")!;
 
   return (
-    <div className="min-h-screen bg-brand-cream dark:bg-brand-dark-bg text-brand-text-primary dark:text-brand-dark-text transition-colors">
+    <main className="min-h-screen bg-brand-cream dark:bg-brand-dark-bg text-brand-text-primary dark:text-brand-dark-text transition-colors">
       <AnimatePresence mode="wait">
         {/* VIEW 1: CHECKOUT */}
         {currentView === "checkout" && (
@@ -348,6 +348,6 @@ export default function HomePage() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </main>
   );
 }

@@ -36,7 +36,6 @@ export function Header({ onOpenCart }: HeaderProps) {
                 ? "bg-white text-brand-text-primary shadow-sm"
                 : "text-white/80 hover:text-white"
             )}
-            aria-label="Português"
           >
             PT
           </button>
@@ -48,7 +47,6 @@ export function Header({ onOpenCart }: HeaderProps) {
                 ? "bg-white text-brand-text-primary shadow-sm"
                 : "text-white/80 hover:text-white"
             )}
-            aria-label="English"
           >
             EN
           </button>

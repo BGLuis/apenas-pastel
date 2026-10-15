@@ -123,9 +123,9 @@ export function Hero({ onSelectFeaturedProduct }: HeroProps) {
                     <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-brand-yellow mb-1">
                       {t.classicOfTheHouse}
                     </span>
-                    <h3 className="font-display font-bold text-2xl text-white">
+                    <h2 className="font-display font-bold text-2xl text-white">
                       Pastel de Queijo
-                    </h3>
+                    </h2>
                   </div>
 
                   {/* Price Tag */}

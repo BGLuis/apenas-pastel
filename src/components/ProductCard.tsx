@@ -54,7 +54,7 @@ export function ProductCard({
                 <span>{formatCurrency(product.price)}</span>
               </div>
               {product.originalPrice && (
-                <span className="line-through text-white/60 font-semibold text-sm sm:text-base">
+                <span className="line-through text-brand-yellow-light/95 font-bold text-sm sm:text-base">
                   {formatCurrency(product.originalPrice)}
                 </span>
               )}
@@ -101,9 +101,9 @@ export function ProductCard({
 
         {/* Info */}
         <div className="flex flex-col gap-1">
-          <h4 className="font-display font-bold text-sm text-brand-text-primary dark:text-brand-dark-text truncate">
+          <h3 className="font-display font-bold text-sm text-brand-text-primary dark:text-brand-dark-text truncate">
             {name}
-          </h4>
+          </h3>
           <div className="flex items-center justify-between text-xs">
             <span className="font-bold text-brand-red dark:text-brand-yellow">
               {formatCurrency(product.price)}

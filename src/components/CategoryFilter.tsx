@@ -63,8 +63,8 @@ export function CategoryFilter({
                 ? "bg-brand-red text-white border-brand-red shadow-sm"
                 : "bg-white dark:bg-brand-dark-surface text-brand-text-secondary dark:text-brand-dark-secondary border-brand-cream-dark dark:border-brand-dark-border hover:border-brand-red"
             )}
-            title={t.favoritesOnly}
-            aria-label={t.favoritesOnly}
+            title={`${t.favoritesOnly}${favoritesCount > 0 ? ` (${favoritesCount})` : ""}`}
+            aria-label={`${t.favoritesOnly}${favoritesCount > 0 ? ` ${favoritesCount}` : ""}`}
           >
             <Heart
               className={cn(
