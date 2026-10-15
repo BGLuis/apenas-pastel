@@ -35,7 +35,16 @@ body {
   scroll-margin-top: 5.5rem;
 }
 
-/* Custom subtle scrollbar */
+/* Custom scrollbars (visible and ergonomic) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(136, 2, 8, 0.35) transparent;
+}
+
+.dark * {
+  scrollbar-color: rgba(231, 183, 23, 0.35) transparent;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -46,12 +55,20 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(136, 2, 8, 0.2);
+  background: rgba(136, 2, 8, 0.35);
   border-radius: 999px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(136, 2, 8, 0.6);
+}
+
 .dark ::-webkit-scrollbar-thumb {
-  background: rgba(231, 183, 23, 0.2);
+  background: rgba(231, 183, 23, 0.35);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(231, 183, 23, 0.6);
 }
 
 /* Text balance */

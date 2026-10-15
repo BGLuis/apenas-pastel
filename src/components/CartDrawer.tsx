@@ -57,14 +57,17 @@ export function CartDrawer({
     <Drawer.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity" />
-        <Drawer.Content className="fixed bottom-0 left-0 right-0 z-50 max-h-[94vh] max-w-lg mx-auto bg-brand-cream dark:bg-brand-dark-surface rounded-t-[32px] overflow-hidden flex flex-col focus:outline-none shadow-2xl border-t border-brand-cream-dark/50 dark:border-brand-dark-border">
+        <Drawer.Content className={cn(
+          "fixed bottom-0 left-0 right-0 z-50 max-w-lg mx-auto bg-brand-cream dark:bg-brand-dark-surface rounded-t-[32px] overflow-hidden flex flex-col focus:outline-none shadow-2xl border-t border-brand-cream-dark/50 dark:border-brand-dark-border",
+          items.length > 0 ? "h-[88vh] max-h-[92vh]" : "max-h-[60vh]"
+        )}>
           {/* Header Grab Handle */}
-          <div className="w-full pt-3 pb-1 flex justify-center bg-transparent">
+          <div className="w-full pt-3 pb-1 flex justify-center bg-transparent flex-shrink-0">
             <div className="w-12 h-1.5 rounded-full bg-brand-cream-dark dark:bg-brand-dark-border" />
           </div>
 
           {/* App Bar */}
-          <div className="px-5 py-3 flex items-center justify-between border-b border-brand-cream-dark/40 dark:border-brand-dark-border">
+          <div className="px-5 py-3 flex items-center justify-between border-b border-brand-cream-dark/40 dark:border-brand-dark-border flex-shrink-0">
             <div className="flex items-center gap-3">
               <button
                 onClick={onClose}
@@ -95,7 +98,7 @@ export function CartDrawer({
           </div>
 
           {/* Content Body */}
-          <div className="overflow-y-auto flex-1 px-5 py-4 pb-32 flex flex-col gap-4">
+          <div className="flex-1 min-h-0 overflow-y-auto px-5 py-4 flex flex-col gap-4 overscroll-contain">
             {items.length === 0 ? (
               <div className="py-16 flex flex-col items-center justify-center text-center gap-3">
                 <div className="w-16 h-16 rounded-full bg-brand-cream-dark/40 flex items-center justify-center text-brand-red dark:text-brand-yellow text-2xl">
@@ -301,12 +304,12 @@ export function CartDrawer({
             )}
           </div>
 
-          {/* Fixed Checkout CTA Button */}
+          {/* Fixed Checkout CTA Footer */}
           {items.length > 0 && (
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-brand-dark-surface/95 backdrop-blur-md border-t border-brand-cream-dark/60 dark:border-brand-dark-border">
+            <div className="flex-shrink-0 p-4 bg-white/95 dark:bg-brand-dark-surface/95 backdrop-blur-md border-t border-brand-cream-dark/60 dark:border-brand-dark-border z-10">
               <button
                 onClick={handleCheckoutClick}
-                className="w-full py-4 px-6 rounded-full bg-brand-red hover:bg-brand-red-hover text-white font-bold text-base shadow-btn flex items-center justify-center gap-2 transition-transform hover:-translate-y-0.5 active:translate-y-0"
+                className="w-full py-3.5 sm:py-4 px-6 rounded-full bg-brand-red hover:bg-brand-red-hover text-white font-bold text-base shadow-btn flex items-center justify-center gap-2 transition-transform hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>{t.checkoutButton}</span>
                 <span>·</span>

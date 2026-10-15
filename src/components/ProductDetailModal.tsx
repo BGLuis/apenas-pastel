@@ -69,14 +69,14 @@ export function ProductDetailModal({
     <Drawer.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity" />
-        <Drawer.Content className="fixed bottom-0 left-0 right-0 z-50 max-h-[92vh] max-w-lg mx-auto bg-brand-cream dark:bg-brand-dark-surface rounded-t-[32px] overflow-hidden flex flex-col focus:outline-none shadow-2xl border-t border-brand-cream-dark/50 dark:border-brand-dark-border">
+        <Drawer.Content className="fixed bottom-0 left-0 right-0 z-50 h-[88vh] max-h-[92vh] max-w-lg mx-auto bg-brand-cream dark:bg-brand-dark-surface rounded-t-[32px] overflow-hidden flex flex-col focus:outline-none shadow-2xl border-t border-brand-cream-dark/50 dark:border-brand-dark-border">
           {/* Header Grab Handle */}
-          <div className="w-full pt-3 pb-2 flex justify-center bg-transparent">
+          <div className="w-full pt-3 pb-2 flex justify-center bg-transparent flex-shrink-0">
             <div className="w-12 h-1.5 rounded-full bg-brand-cream-dark dark:bg-brand-dark-border" />
           </div>
 
           {/* Scrollable Content */}
-          <div className="overflow-y-auto flex-1 px-5 pb-28">
+          <div className="flex-1 min-h-0 overflow-y-auto px-5 pb-6 overscroll-contain flex flex-col">
             {/* Food Image with Close and Favorite actions */}
             <div className="relative w-full aspect-[16/11] rounded-2xl overflow-hidden mb-4 shadow-md bg-brand-cream-dark/20">
               <Image
@@ -238,7 +238,7 @@ export function ProductDetailModal({
           </div>
 
           {/* Fixed Bottom Action Bar */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-brand-dark-surface/95 backdrop-blur-md border-t border-brand-cream-dark/60 dark:border-brand-dark-border flex items-center gap-3">
+          <div className="flex-shrink-0 p-4 bg-white/95 dark:bg-brand-dark-surface/95 backdrop-blur-md border-t border-brand-cream-dark/60 dark:border-brand-dark-border flex items-center gap-3 z-10">
             {/* Quantity Selector */}
             <div className="flex items-center gap-3 px-3 py-2 rounded-full bg-brand-cream dark:bg-brand-dark-card border border-brand-cream-dark/50 dark:border-brand-dark-border">
               <button

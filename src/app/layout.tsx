@@ -54,12 +54,14 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           {children}
           <Toaster
-            position="bottom-center"
+            position="top-center"
+            richColors
             toastOptions={{
               style: {
                 borderRadius: "999px",
                 padding: "12px 20px",
                 fontFamily: "var(--font-dm-sans)",
+                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
               },
             }}
           />
