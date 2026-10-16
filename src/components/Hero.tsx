@@ -113,6 +113,8 @@ export function Hero({ onSelectFeaturedProduct }: HeroProps) {
                   alt="Pastel de Queijo"
                   fill
                   priority
+                  fetchPriority="high"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 384px"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -144,6 +146,7 @@ export function Hero({ onSelectFeaturedProduct }: HeroProps) {
                   src="/images/selo-frito-na-hora.svg"
                   alt="Selo Frito na Hora Desde 2021"
                   fill
+                  sizes="(max-width: 640px) 112px, 144px"
                   className="object-contain"
                 />
               </div>

@@ -8,12 +8,26 @@ import { Hero } from "@/components/Hero";
 import { PastelBorder } from "@/components/PastelBorder";
 import { CategoryFilter } from "@/components/CategoryFilter";
 import { LiveFryerSection } from "@/components/LiveFryerSection";
+import dynamic from "next/dynamic";
 import { ProductCard } from "@/components/ProductCard";
-import { ProductDetailModal } from "@/components/ProductDetailModal";
 import { FloatingCartBar } from "@/components/FloatingCartBar";
-import { CartDrawer } from "@/components/CartDrawer";
-import { CheckoutView } from "@/components/CheckoutView";
-import { OrderSuccessView } from "@/components/OrderSuccessView";
+
+const CartDrawer = dynamic(
+  () => import("@/components/CartDrawer").then((mod) => mod.CartDrawer),
+  { ssr: false }
+);
+const ProductDetailModal = dynamic(
+  () => import("@/components/ProductDetailModal").then((mod) => mod.ProductDetailModal),
+  { ssr: false }
+);
+const CheckoutView = dynamic(
+  () => import("@/components/CheckoutView").then((mod) => mod.CheckoutView),
+  { ssr: false }
+);
+const OrderSuccessView = dynamic(
+  () => import("@/components/OrderSuccessView").then((mod) => mod.OrderSuccessView),
+  { ssr: false }
+);
 import { HowItWorks } from "@/components/HowItWorks";
 import { DesktopFooter } from "@/components/DesktopFooter";
 import { BottomNav } from "@/components/BottomNav";
@@ -109,7 +123,7 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-brand-cream dark:bg-brand-dark-bg text-brand-text-primary dark:text-brand-dark-text transition-colors">
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         {/* VIEW 1: CHECKOUT */}
         {currentView === "checkout" && (
           <motion.div
@@ -148,7 +162,7 @@ export default function HomePage() {
         {currentView === "menu" && (
           <motion.div
             key="menu"
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}

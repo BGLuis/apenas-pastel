@@ -89,6 +89,7 @@ export function ProductCard({
               src={product.image}
               alt={name}
               fill
+              sizes="(max-width: 768px) 100vw, 500px"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
@@ -110,6 +111,7 @@ export function ProductCard({
             src={product.image}
             alt={name}
             fill
+            sizes="176px"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
           <button
@@ -183,6 +185,7 @@ export function ProductCard({
             src={product.image}
             alt={name}
             fill
+            sizes="(max-width: 640px) 96px, 112px"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
           <button
@@ -210,6 +213,7 @@ export function ProductCard({
           src={product.image}
           alt={name}
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
