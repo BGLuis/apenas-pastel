@@ -1,79 +1,129 @@
-# 🥟 Apenas Pastel · Pastelaria Artesanal
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/header/graph.svg?title=Apenas+Pastel&subtitle=Pastelaria+artesanal+%C2%B7+Crocante+por+fora%2C+recheado+at%C3%A9+a+borda&align=left&font=geist-mono&mode=dark&logo=https%3A%2F%2Fraw.githubusercontent.com%2FBGLuis%2Fapenas-pastel%2Fmain%2Fpublic%2Fimages%2Flogo-simbolo.svg" /><img alt="Apenas Pastel" src="https://shieldcn.dev/header/graph.svg?title=Apenas+Pastel&subtitle=Pastelaria+artesanal+%C2%B7+Crocante+por+fora%2C+recheado+at%C3%A9+a+borda&align=left&font=geist-mono&mode=light&logo=https%3A%2F%2Fraw.githubusercontent.com%2FBGLuis%2Fapenas-pastel%2Fmain%2Fpublic%2Fimages%2Flogo-simbolo.svg" /></picture>
+</p>
 
-> *Crocante por fora, recheado até a borda.*
+<p align="center"><b>Português (BR)</b> · <a href="README.en.md">English</a></p>
 
-Aplicação web moderna, responsiva e interativa desenvolvida com base no design do Figma (Mobile & Desktop) para a pastelaria artesanal **Apenas Pastel** (Barroca, Belo Horizonte - MG).
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/github/stars/BGLuis/apenas-pastel.svg?variant=secondary&size=sm&mode=dark" /><img alt="GitHub Stars" src="https://shieldcn.dev/github/stars/BGLuis/apenas-pastel.svg?variant=secondary&size=sm&mode=light" /></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/github/forks/BGLuis/apenas-pastel.svg?variant=secondary&size=sm&mode=dark" /><img alt="GitHub Forks" src="https://shieldcn.dev/github/forks/BGLuis/apenas-pastel.svg?variant=secondary&size=sm&mode=light" /></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/github/watchers/BGLuis/apenas-pastel.svg?variant=secondary&size=sm&mode=dark" /><img alt="Watchers" src="https://shieldcn.dev/github/watchers/BGLuis/apenas-pastel.svg?variant=secondary&size=sm&mode=light" /></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/github/contributors/BGLuis/apenas-pastel.svg?theme=emerald&size=sm&mode=dark" /><img alt="Contributors" src="https://shieldcn.dev/github/contributors/BGLuis/apenas-pastel.svg?theme=emerald&size=sm&mode=light" /></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/github/license/BGLuis/apenas-pastel.svg?variant=ghost&size=sm&mode=dark" /><img alt="License" src="https://shieldcn.dev/github/license/BGLuis/apenas-pastel.svg?variant=ghost&size=sm&mode=light" /></picture>
+</p>
 
----
+<p align="center">
+  <img alt="Next.js" src="https://shieldcn.dev/badge/Framework-Next.js-000000.svg?logo=nextdotjs&variant=branded&size=sm" />
+  <img alt="React" src="https://shieldcn.dev/badge/Framework-React-61DAFB.svg?logo=react&variant=branded&size=sm" />
+  <img alt="TypeScript" src="https://shieldcn.dev/badge/Language-TypeScript-3178C6.svg?logo=typescript&variant=branded&size=sm" />
+  <img alt="Tailwind CSS" src="https://shieldcn.dev/badge/Framework-Tailwind_CSS-06B6D4.svg?logo=tailwindcss&variant=branded&size=sm" />
+</p>
 
-## 🚀 Live Demo & Links
+# 📖 Sobre
+
+O **Apenas Pastel** é uma aplicação web moderna e interativa desenvolvida com Next.js 15, React 19, TypeScript e Tailwind CSS para uma pastelaria artesanal de Belo Horizonte (bairro Barroca). O projeto traduz com precisão o design do Figma (mobile e desktop) em uma experiência de usuário fluida para pedidos de pastel de feira com personalização de recheios e adicionais, cálculo de frete grátis, alternância de tema claro/escuro e finalização de pedido integrada ao WhatsApp.
+
+# 📋 Motivo
+
+Criado como a ideia de um renascimento de um projeto antigo do tempo do ensino médio.
+
+# 🚀 Demonstração & Links
 
 - 🌐 **Deploy na Vercel**: [https://apenas-pastel-remaster-hd.vercel.app](https://apenas-pastel-remaster-hd.vercel.app)
 - 📦 **Repositório GitHub**: [https://github.com/BGLuis/apenas-pastel](https://github.com/BGLuis/apenas-pastel)
-- 🎨 **Figma Design**:
+- 🎨 **Design no Figma**:
   - [Mobile (Node 2:3)](https://www.figma.com/design/LJd6nBzQlj6H8KiSV12TtK/Apenas-pastel?node-id=2-3)
   - [Desktop (Node 2:4)](https://www.figma.com/design/LJd6nBzQlj6H8KiSV12TtK/Apenas-pastel?node-id=2-4)
 
----
+# 📸 Demonstração Visual
 
-## ✨ Recursos & Funcionalidades
+<p align="center">
+  <img alt="Prévia Desktop da aplicação Apenas Pastel" src="public/screenshots/desktop-preview.png" width="850" />
+</p>
 
-- **📱 Design Mobile-First & Desktop Responsivo**: Adaptação fluida do viewport de 390px ao desktop de 1440px.
-- **🥟 Borda de Pastel Vetorial**: Divisor de seção personalizado reproduzindo o fechamento com garfo tradicional de pastel de feira.
-- **⚡ Saindo da Fritadeira**: Carrossel horizontal de fornadas com status ao vivo pulsante.
-- **🏷️ Detalhe do Produto com Drawer Tátil (`vaul`)**:
-  - Seleção de adicionais (borda de catupiry, queijo extra, vinagrete).
-  - Campo de observações personalizadas.
-  - Fatos rápidos: tempo de preparo, picância e porções.
-  - Seletor dinâmico de quantidade.
-- **🛍️ Sacola Interativa & Cálculo de Frete Grátis**:
-  - Barra de progresso dinâmica em direção à meta de entrega grátis.
-  - Alternador segmentado entre *Entrega* e *Retirada no balcão*.
-  - Carrossel de upsell com sugestões de acompanhamento.
-  - Notificações com botão `[Desfazer]` via `sonner`.
-- **💳 Checkout Simulado com WhatsApp**:
-  - Passo a passo: Identificação ➔ Endereço em BH ➔ Forma de Pagamento (Cartão na entrega, Pix, Dinheiro).
-  - Redirecionamento formatado diretamente para o WhatsApp da pastelaria.
-- **🎉 Pedido Enviado ("Pedido na Mão!")**:
-  - Efeito comemorativo de confetes (`canvas-confetti`).
-  - Stepper de status do pedido em tempo real.
-- **🌓 Dark Mode & Light Mode**: Alternância sem flash branco com paleta fiel à tela 06 do Figma via `next-themes`.
-- **🌐 Internacionalização (i18n)**: Dicionário completo com alternância instantânea entre Português (PT-BR) e Inglês (EN).
+<p align="center">
+  <img alt="Prévia Mobile da aplicação Apenas Pastel" src="public/screenshots/mobile-preview.png" width="340" />
+</p>
 
----
+# ⚡ Benchmarks & Performance
 
-## 🛠️ Stack Tecnológica
+Auditoria oficial realizada via **Google Lighthouse (v13.5.0)** diretamente sobre o deploy de produção:
 
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router, React 19)
-- **Linguagem**: [TypeScript](https://www.typescriptlang.org/)
-- **Estilização**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animações**: [Framer Motion](https://www.framer.com/motion/)
-- **Drawers & Bottom Sheets**: [Vaul](https://vaul.emilkowal.ski/)
-- **Toasts**: [Sonner](https://sonner.emilkowal.ski/)
-- **Estado Global**: [Zustand](https://zustand.docs.pmnd.rs/) (com `persist` no `localStorage`)
-- **Ícones**: [Lucide React](https://lucide.dev/)
-- **Tipografia**: `Bricolage Grotesque`, `Fraunces`, `DM Sans` via `next/font/google`
+<p align="center">
+  <img alt="Lighthouse Performance" src="https://shieldcn.dev/badge/Performance-94%25-22c55e.svg?variant=branded&size=sm" />
+  <img alt="Lighthouse Acessibilidade" src="https://shieldcn.dev/badge/Acessibilidade-100%25-22c55e.svg?variant=branded&size=sm" />
+  <img alt="Lighthouse Melhores Práticas" src="https://shieldcn.dev/badge/Melhores_Pr%C3%A1ticas-100%25-22c55e.svg?variant=branded&size=sm" />
+  <img alt="Lighthouse SEO" src="https://shieldcn.dev/badge/SEO-100%25-22c55e.svg?variant=branded&size=sm" />
+</p>
 
----
+### Métricas Core Web Vitals (Auditoria Científica de Mercado)
 
-## 💻 Como Rodar Localmente
+| Métrica | Valor Medido | Meta Google CWV | Classificação |
+| :--- | :--- | :--- | :--- |
+| **First Contentful Paint (FCP)** | 0.9 s | < 1.8 s | 🟢 Bom (Rápido) |
+| **Speed Index** | 1.3 s | < 3.4 s | 🟢 Bom (Rápido) |
+| **Total Blocking Time (TBT)** | 40 ms | < 200 ms | 🟢 Bom (Excelente) |
+| **Cumulative Layout Shift (CLS)** | 0 | < 0.1 | 🟢 Perfeito (Zero deslocamento) |
+| **Largest Contentful Paint (LCP)** | 3.1 s | < 2.5 s | 🟡 Otimizável |
 
-```bash
-# Clone o repositório
-git clone https://github.com/BGLuis/apenas-pastel.git
-cd apenas-pastel
+# ✨ Recursos & Funcionalidades
 
-# Instale as dependências
-npm install
+- **Design Responsivo & Mobile-First**: Adaptação perfeita desde viewports mobile de 390px até telas desktop ultrawide.
+- **Borda de Pastel Vetorial**: Divisor de seção customizado reproduzindo o fechamento com garfo tradicional de pastel de feira.
+- **Saindo da Fritadeira**: Carrossel horizontal de fornadas em tempo real com indicador visual pulsante.
+- **Detalhes de Produto com Drawer Tátil (`vaul`)**:
+  - Seleção de adicionais (borda recheada, queijo extra, vinagrete).
+  - Observações customizadas do pedido.
+  - Informações rápidas: tempo de preparo, picância e porções.
+  - Controle dinâmico de quantidade.
+- **Sacola Interativa & Cálculo de Frete Grátis**:
+  - Barra de progresso dinâmica até o valor de entrega grátis.
+  - Alternador segmentado entre entrega a domicílio e retirada no balcão.
+  - Carrossel de upsell com sugestões de bebidas e acompanhamentos.
+  - Notificações de ação com suporte a desfazer via `sonner`.
+- **Checkout Integrado com WhatsApp**:
+  - Fluxo estruturado: identificação, endereço de entrega e forma de pagamento.
+  - Geração e envio da mensagem pré-formatada diretamente para o WhatsApp do estabelecimento.
+- **Celebração de Pedido Realizado**: Animação de confetes interativa via `canvas-confetti` com acompanhamento de etapas.
+- **Temas Claro e Escuro (Dark/Light Mode)**: Alternância suave sem flash de renderização via `next-themes`.
+- **Suporte a Internacionalização (i18n)**: Alternância dinâmica e reativa entre Português e Inglês.
 
-# Inicie o servidor de desenvolvimento
-npm run dev
-```
+# 💻 Como iniciar
 
-Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
+### Requisitos
 
----
+- [Node.js](https://nodejs.org)
+- [npm](https://www.npmjs.com)
 
-## 📜 Licença
+### Instalação
 
-Distribuído sob a licença MIT. Feito com carinho para amantes de pastel de feira! 🥟
+1. Clone o repositório:
+
+   ```sh
+   git clone https://github.com/BGLuis/apenas-pastel.git
+   ```
+
+2. Entre no diretório do projeto:
+
+   ```sh
+   cd apenas-pastel
+   ```
+
+3. Instale as dependências e inicie o servidor de desenvolvimento:
+
+   ```sh
+   npm install
+   npm run dev
+   ```
+
+Abra [http://localhost:3000](http://localhost:3000) no navegador para visualizar a aplicação.
+
+# 🤝 Contribuidores
+
+<a href="https://github.com/BGLuis/apenas-pastel/graphs/contributors">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/contributors/BGLuis/apenas-pastel.svg?title=false&preset=transparent&border=false&mode=dark" /><img alt="Contribuidores" src="https://shieldcn.dev/contributors/BGLuis/apenas-pastel.svg?title=false&preset=transparent&border=false&mode=light" /></picture>
+</a>
+
+# 📄 Licença
+
+Distribuído sob a licença [MIT](LICENSE).
